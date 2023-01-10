@@ -9,6 +9,10 @@
 <!-- need the |safe filter to tell django not to HTML-escape which it does to avoid adding unintended html -->
 
 {{ entry_html|safe }}
+
+<form action="{% url 'edit' title=title %}">
+    <input type="submit" value="Edit Page">
+</form>
     
 
 {% endblock %}
